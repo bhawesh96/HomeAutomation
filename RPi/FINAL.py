@@ -71,7 +71,7 @@ def capture():
     cv2.destroyAllWindows()
 
 def security_upload():
-    session = ftplib.FTP('cribblservices.esy.es','u553917010','Clandestine@1996')
+    session = ftplib.FTP('cribblservices.esy.es','username','password')
     file = open('cap.jpg','rb')
     session.storbinary('STOR photo.jpg', file)     # send the file
     file.close()                                    # close file and FTP
