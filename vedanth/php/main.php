@@ -11,7 +11,7 @@ echo $string;
 fclose($f1);
 fclose($f2);
 fclose($f3);
-$myfile = fopen("main.txt", "w") or die("Unable to open file!");
+$myfile = fopen("main.txt", "w") or die("Unable to open file! main.txt");
 fwrite($myfile, $string);
 fclose($myfile);
 ?>
