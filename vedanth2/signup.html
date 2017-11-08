@@ -1,7 +1,6 @@
 <html>
 <body>
 <title>Home Automation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script type="text/javascript" src='js/jq.js'></script>
@@ -20,37 +19,28 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
+        <!-- <li><a href="index.html">Home</a></li>
         <li><a href="hall.html">Hall</a></li>
-        <li class="active"><a href="room1.html">Room1</a></li>
-        <li><a href="room2.html">Room2</a></li>
+        <li><a href="room1.html">Room1</a></li>
+        <li><a href="room2.html">Room2</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="reset"><a><span class="glyphicon glyphicon-user"></span> Reset</a></li>
-        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li class="active"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <center>
-
-
-<h1> Home Automation GUI </h1>
-
-<div class='devices'>
-		<div class='device'>
-			<img class='device1img' src='images/bulboff.png'>
-			<p id = 'ledheading'>Room 1 LED</p>
-			<button class='device1but' name ="on" id="on" value = "a0">ON</button>
-		</div>
-
-		<div class='device2'>
-			<h1 class='tempdata'>DATA</h1>
-		 	<p>Temperature Data</p>
-			<button class='tempbut' name ="" id="dooropen" value = "e0">REFRESH</button>
-		</div>
-		
+<div class="form">
+<form action="php/signup.php" method="POST">
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="text" name="phone" placeholder="Phone Number" min="8000000000" max="999999999" required>
+  <input type="text" name="email" placeholder="Email" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <input type="submit" name="">
+</form>
 </div>
 </center>
 </body>
