@@ -1,10 +1,18 @@
 h1{
 	text-align: center;
 }
+
+img {
+	width: 30%;
+	/*padding-top: 30px;*/
+}
 .device {
 	display: inline-block;
-	height: 215px;
+	height: 275px;
 	width: 215px;
+	background: red;
+	text-align: center;
+	padding-top: 50px;
 }
 
 .device2 {
@@ -12,15 +20,14 @@ h1{
 	height: 215px;
 	width: 215px;
 	margin-top: 55px;
-	margin-left: 20px;
-
+	/*margin-left: 20px;*/
 }
 
 .device2 p{
 	
 	font-size: 20px;
 	margin-top: 4px;
-	margin-left: 22px;
+	/*margin-left: 22px;*/
 
 }
 .device2 button{
@@ -29,21 +36,18 @@ h1{
 	margin-left: 45px;	
 }
 
-.doorimg{
-	margin-left: 30px;
-}
 #on, .fanbut{
 	
 	width: 50px;
 	height: 30px;
-	margin-left: 75px;
+	/*margin-left: 75px;*/
 }
-.doorbut{
+/*.doorbut{
 	width: 70px;
 	height: 30px;
 	margin-left: 45px;	
 }
-
+*/
 .fanimg{
 	height:179px; 
 	width:200px;
