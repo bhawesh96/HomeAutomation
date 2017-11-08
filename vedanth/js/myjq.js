@@ -9,72 +9,108 @@ function device1on() {
 	$('.device1img').attr('src','images/bulboff.png');
 	$(".device1but").val("a0");
 	$(".device1but").text("ON");
+	$.get('php/room1.php', { light1:'a0'}, function(data){
+				console.log(data);
+			 	});
 }
 
 function device1off() {
 	$('.device1img').attr('src','images/bulbon.png');
 	$(".device1but").text("OFF");
 	$(".device1but").val("a1");
+	$.get('php/room1.php', { light1:'a1'}, function(data){
+				console.log(data);
+			 	});
 }
 
 function device2on() {
 	$('.device2img').attr('src','images/bulboff.png');
 	$(".device2but").val("b0");
 	$(".device2but").text("ON");
+	$.get('php/room2.php', { light1:'b0'}, function(data){
+ 				console.log(data);
+ 			 	});
 }
 
 function device2off() {
 	$('.device2img').attr('src','images/bulbon.png');
 	$(".device2but").text("OFF");
 	$(".device2but").val("b1");
+	$.get('php/room2.php', { light1:'b1'}, function(data){
+ 				console.log(data);
+ 			 	});
 }
 
 function device3on() {
 	$('.device3img').attr('src','images/bulboff.png');
 	$(".device3but").val("c0");
 	$(".device3but").text("ON");
+	//$.get('php/hall.php', { light1:'c0'}, function(data){
+ 	//			console.log(data);
+ 	//		 	});
 }
 
 function device3off() {
 	$('.device3img').attr('src','images/bulbon.png');
 	$(".device3but").text("OFF");
 	$(".device3but").val("c1");
+	//$.get('php/hall.php', { light1:'c1'}, function(data){
+ 	//			console.log(data);
+ 	//		 	});
 }
 
 function device4on() {
 	$('.device4img').attr('src','images/bulboff.png');
 	$(".device4but").val("d0");
 	$(".device4but").text("ON");
+	//$.get('php/hall.php', { light2:'d0'}, function(data){
+ 	//			console.log(data);
+ 	//		 	});
 }
 
 function device4off() {
 	$('.device4img').attr('src','images/bulbon.png');
 	$(".device4but").text("OFF");
 	$(".device4but").val("d1");
+	//$.get('php/hall.php', { light2:'d1'}, function(data){
+ 	//			console.log(data);
+ 	//		 	});
 }
 
 function doorclose() {
 	$('.doorimg').attr('src','images/doorclose.png');
 	$(".doorbut").text("OPEN");
 	$(".doorbut").val("e0");
+	//$.get('php/hall.php', { door:'e0'}, function(data){
+ 	//			console.log(data);
+ 	//		 	});
 }
 
 function dooropen() {
 	$('.doorimg').attr('src','images/dooropen.png');
 	$(".doorbut").text("CLOSE");
 	$(".doorbut").val("e1");
+	//$.get('php/hall.php', { door:'e1'}, function(data){
+ 	//			console.log(data);
+ 	//		 	});
 }
 
 function fanon() {
 	$('.fanimg').attr('src','images/fanon.gif');
 	$(".fanbut").text("OFF");
 	$(".fanbut").val("f1");
+	// $.get('php/hall.php', {fan :'f1'}, function(data){
+ // 				console.log(data);
+ // 			 	});
 }
 
 function fanoff() {
 	$('.fanimg').attr('src','images/fanoff.png');
 	$(".fanbut").text("ON");
 	$(".fanbut").val("f0");
+	// $.get('php/hall.php', { fan:'f0'}, function(data){
+ // 				console.log(data);
+ // 			 	});
 	
 }
 
@@ -200,30 +236,31 @@ $('.reset').click(function(){
 	});
 
 
-$(document).click(function() {
+// $(document).click(function() {
 	
 
-		var r1light1 = $(".device1but").val();
-		var r2light2 = $(".device2but").val();
-		var halllight1 = $(".device3but").val();
-		var halllight2 = $(".device4but").val();
-		var door = $(".doorbut").val();
-		var fan = $(".fanbut").val();
-		$('.data2').text(r1light1+r2light2+halllight1+halllight2+door+fan);
-		$.get('php/room1.php', { light1:r1light1}, function(data){
-				console.log(data);
-			 	});
+// 		var r1light1 = $(".device1but").val();
+// 		var r2light2 = $(".device2but").val();
+// 		var halllight1 = $(".device3but").val();
+// 		var halllight2 = $(".device4but").val();
+// 		var door = $(".doorbut").val();
+// 		var fan = $(".fanbut").val();
+// 		console.log(r1light1+r2light2+halllight1+halllight2+door+fan);
+// 		$('.data2').text(r1light1+r2light2+halllight1+halllight2+door+fan);
+// 		$.get('php/room1.php', { light1:r1light1}, function(data){
+// 				console.log(data);
+// 			 	});
 
-		$.get('php/room2.php', { light1:r2light2}, function(data){
-				console.log(data);
-			 	});
+// 		$.get('php/room2.php', { light1:r2light2}, function(data){
+// 				console.log(data);
+// 			 	});
 
-  	 	$.get('php/hall.php', { light1:halllight1, light2:halllight2, fan : fan, door : door}, function(data){
-  	 			console.log(data);
-			 	});
+//   	 	$.get('php/hall.php', { light1:halllight1, light2:halllight2, fan : fan, door : door}, function(data){
+//   	 			console.log(data);
+// 			 	});
 
 		
-});
+// });
 
     });
 
