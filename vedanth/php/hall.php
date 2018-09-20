@@ -10,5 +10,16 @@ echo $msg.$msg1.$msg2.$msg3;
 $myfile = fopen("hall.txt", "w") or die("Unable to open file!");
 fwrite($myfile, $string);
 fclose($myfile);
-include "main.php"
+include "main.php";
+
+include "db.php";
+
+$sql = "UPDATE status SET device3='".$msg."',device4='".$msg1."',fan='".$msg2."',door='".$msg3."'";
+echo $sql;
+
+if (mysqli_query($conn, $sql)) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . mysqli_error($conn);
+}
 ?>
